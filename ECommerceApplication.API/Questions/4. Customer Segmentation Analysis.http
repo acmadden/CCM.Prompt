@@ -1,0 +1,41 @@
+# Story: Customer Segmentation Analysis
+#
+# As a data analyst, categorize customers based on their annual spending to help marketing tailor
+# campaigns effectively.
+#
+# Acceptance Criteria:
+# 1. Data Access:
+#    - Fetch customer purchase data from ECommerceApplication.Data.Db.Purchases.
+#
+# 2. Segmentation Logic:
+#    - Segment customers based on last year purchase data into Gold, Silver, Bronze.
+#      - Gold (>$10k)
+#      - Silver ($5k-$9.99k)
+#      - Bronze (<$5k).
+#
+# 3. Return Data:
+#    - Return a list showing each customer's segment.
+#
+# Example API Request:
+GET http://localhost:5141/customers/segment
+
+# Expected JSON Output:
+# [
+#   {
+#     "customerId": "C001",
+#     "segment": "Silver"
+#   },
+#   {
+#     "customerId": "C002",
+#     "segment": "Silver"
+#   },
+#   {
+#     "customerId": "C003",
+#     "segment": "Bronze"
+#   },
+#   {
+#     "customerId": "C004",
+#     "segment": "Bronze"
+#   }
+# ]
+# Note: This output helps marketing to understand customer spending patterns and tailor campaigns.

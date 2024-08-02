@@ -1,0 +1,42 @@
+# Story: Product Sales Analysis
+#
+# As a data analyst, analyze historical sales data to identify products with consistently high sales to
+# assist in making informed inventory decisions.
+#
+# Acceptance Criteria:
+# 1. Data Access:
+#    - Retrieve sales records from ECommerceApplication.Data.Db.MonthlySales.
+#
+# 2. Analysis:
+#    - Identify products with monthly sales exceeding 50 units.
+#
+# 3. Return Data:
+#    - Return a list of product names and their sales consistency status.
+#
+# Example API Request:
+GET http://localhost:5141/sales/analyze
+
+# Expected JSON Output:
+# [
+#   {
+#     "name": "Laptop",
+#     "consistentHighSales": true
+#   },
+#   {
+#     "name": "Smartphone",
+#     "consistentHighSales": false
+#   },
+#   {
+#     "name": "Tablet",
+#     "consistentHighSales": false
+#   },
+#   {
+#     "name": "Headphones",
+#     "consistentHighSales": false
+#   },
+#   {
+#     "name": "Watch",
+#     "consistentHighSales": false
+#   }
+# ]
+# Note: Output indicates which products consistently achieved high sales, aiding in inventory decisions.
